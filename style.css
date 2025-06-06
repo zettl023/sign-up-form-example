@@ -6,7 +6,12 @@
     font-style: normal;
 }
 
+:root {
+    --sidebar-width: 356px;
+}
+
 body {
+    background-color: rgb(237,233,232);
     display: flex;
     margin: 0;
     padding: 0;
@@ -16,6 +21,10 @@ h1 {
     font-family: introrustg, sans-serif;
     font-size: 40px;
     color: white;
+}
+
+h2 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 img {
@@ -30,12 +39,16 @@ img {
     /* cover is the behavior I want, but I want the image to be proportioned correctly*/
     background-size: cover;
     background-repeat: no-repeat;
-    width: 356px;
+    width: var(--sidebar-width);
     height: max(100vh, 538px);
 }
 
 #main-content {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
     border: solid green 2px;
+    
 }
 
 #logo {
@@ -43,7 +56,7 @@ img {
     justify-content: center;
     align-items: center;
     background-color: rgba(0,0,0, 0.5);
-    width: 356px;
+    width: var(--sidebar-width);
     height: 100px;
     margin-top: 100px;
 }
@@ -51,4 +64,16 @@ img {
 #odin {
     width: auto;
     height: 75px;
+}
+
+.bookend {
+    height: 33vh;
+}
+
+#form-container {
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0 5px 5px 0px rgb(0,0,0,0.2);
+    padding: 5px 20px; 
+    height: 34vh;
 }
