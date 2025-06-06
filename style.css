@@ -67,7 +67,7 @@ img {
 }
 
 .bookend {
-    height: 33vh;
+   flex: auto;
 }
 
 #form-container {
@@ -75,5 +75,5 @@ img {
     background-color: white;
     box-shadow: 0 5px 5px 0px rgb(0,0,0,0.2);
     padding: 5px 20px; 
-    height: 34vh;
+    height: 250px;
 }
