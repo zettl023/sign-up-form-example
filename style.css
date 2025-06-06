@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'introrustg';
+    src: url('fonts/introheadr-base-webfont.woff2') format('woff2'),
+         url('fonts/introheadr-base-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: introrustg, sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+img {
+    width: auto;
+    height: 100vh;
+}
+
+#image-and-logo {
+    border: solid black 2px;
+    background-image: url('images/desert.jpg');
+    /* background-attachment: fixed; */
+    /* cover is the behavior I want, but I want the image to be proportioned correctly*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 356px;
+    height: max(100vh, 538px);
+}
+
+#main-content {
+    border: solid green 2px;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0, 0.5);
+    width: 356px;
+    height: 100px;
+    margin-top: 100px;
+}
+
+#odin {
+    width: auto;
+    height: 75px;
+}
