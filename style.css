@@ -15,6 +15,7 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -33,7 +34,7 @@ img {
 }
 
 #image-and-logo {
-    border: solid black 2px;
+    display: flex;
     background-image: url('images/desert.jpg');
     /* background-attachment: fixed; */
     /* cover is the behavior I want, but I want the image to be proportioned correctly*/
@@ -41,14 +42,6 @@ img {
     background-repeat: no-repeat;
     width: var(--sidebar-width);
     height: max(100vh, 538px);
-}
-
-#main-content {
-    display: flex;
-    flex: auto;
-    flex-direction: column;
-    border: solid green 2px;
-    
 }
 
 #logo {
@@ -66,14 +59,53 @@ img {
     height: 75px;
 }
 
+@media screen and (max-width:800px) {
+    body {
+        flex-direction: column;
+    }
+
+    #image-and-logo {
+        width: 100vw;
+        height: 100px;
+        align-items: center;
+        justify-content:center;
+    }
+
+    #logo {
+        margin: 0;
+        width: 75vw;
+    }
+}
+
+#main-content {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    min-width: 250px; 
+}
+
 .bookend {
-   flex: auto;
+    flex-grow: 0;
+    padding: 30px 20px;
+    /* min-width: 250px;  */
+}
+
+#header {
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #form-container {
+    flex-shrink: 0;
     box-sizing: border-box;
     background-color: white;
     box-shadow: 0 5px 5px 0px rgb(0,0,0,0.2);
-    padding: 5px 20px; 
+    padding: 0 20px; 
     height: 250px;
 }
