@@ -63,6 +63,7 @@ label {
     height: 75px;
 }
 
+/* If the screen is less that 800px wide, put the logo on top instead of on the side. */
 @media screen and (max-width:800px) {
     body {
         flex-direction: column;
