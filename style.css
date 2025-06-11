@@ -132,15 +132,45 @@ form {
 }
 
 .formrow > .input-cell > input {
+    outline: none;
     margin-bottom: 10px;
     width: 25vw;
     min-width: 30ch;
     font-size: 16px;
     border: 1px solid #E5E7EB;
-    border-radius: 10%;
+    border-radius: 5px;
+}
+
+.formrow > .input-cell > input:focus {
+    /* Remove the default outline from the input box. */
+    /* outline: none; */
+    border: 1px skyblue solid;
+    box-shadow: 1px 2px 5px 0 rgba(0,0,0,0.5);
+}
+
+.formrow > .input-cell > input:invalid {
+    /* outline: none; */
+    border: 1px #a83632 solid;
 }
 
 .formrow > .input-cell {
     display: flex;
     flex-direction: column;
+}
+
+#registration-button {
+    padding: 10px 30px;
+    border-radius: 7px;
+    color: white;
+    border: none;
+    background-color: #c26f38;
+    box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.5);
+}
+
+#registration-button:hover {
+    cursor: pointer;
+}
+
+#footer p {
+    font-size: 14px;
 }
